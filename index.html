@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="status-bar">
+      <span><span class="dot"></span>Backend: <b id="srvStatus">Connecting...</b></span>
+      <span id="dbStatus">📁 Database: Checking...</span>
+      <span>🧠 Model: <b>ResNet50</b></span>
+    </div>
+
+    <h1>AI-Generated Image Detector</h1>
+    <p class="sub">Classify photos as authentic or AI-generated in real-time.</p>
+
+    <div class="dropzone" id="dz">
+      <div class="dz-icon">🖼️</div>
+      <div class="dz-title">Choose an image or drop it here</div>
+      <div class="dz-sub">Supports JPG, PNG, WEBP</div>
+      <input type="file" id="fileInput" accept="image/*" style="display:none">
+    </div>
+
+    <div class="samples">
+      <span>Quick test from Database:</span>
+      <button class="btn-sm" id="btnSampleReal">📷 Sample Real</button>
+      <button class="btn-sm" id="btnSampleFake">🤖 Sample AI</button>
+    </div>
+
+    <div class="preview-box" id="prevBox">
+      <img id="imgElem" src="" alt="preview">
+      <div class="action-btns">
+        <button class="btn-run" id="runBtn">⚡ Analyze Image</button>
+        <button class="btn-sm" id="resetBtn">Reset</button>
+      </div>
+    </div>
+
+    <div class="result" id="resBox">
+      <div class="result-header">
+        <span class="badge" id="vBadge">Verdict</span>
+        <span class="conf-text" id="confText">--%</span>
+      </div>
+      <div class="prob-labels">
+        <span>Authentic Real: <b id="rProb">0%</b></span>
+        <span>AI-Generated: <b id="fProb">0%</b></span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" id="probBar"></div></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
