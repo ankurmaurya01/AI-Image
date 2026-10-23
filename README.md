@@ -214,13 +214,6 @@ This project is licensed under the **MIT License**.
 
 See the `LICENSE` file for more information.
 
-##  Author
-
-**Your Name**
-
-* GitHub: `@your-username`
-* Email: `your-email@example.com`
-
 ## ⭐ Support
 
 If you find this project useful, consider giving the repository a ⭐ on GitHub!
